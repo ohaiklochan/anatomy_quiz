@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  text: MyString
+  first_answer: MyString
+  second_answer: MyString
+  third_answer: MyString
+  fourth_answer: MyString
+  correct_answer: MyString
+  user_id: 
+
+two:
+  text: MyString
+  first_answer: MyString
+  second_answer: MyString
+  third_answer: MyString
+  fourth_answer: MyString
+  correct_answer: MyString
+  user_id: 
