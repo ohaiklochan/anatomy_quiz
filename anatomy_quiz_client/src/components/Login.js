@@ -23,7 +23,7 @@ class Login extends React.Component {
   handleSubmit = e => {
   e.preventDefault();
   this.props.login(this.state.fields.username, this.state.fields.password)
-  this.props.history.push('/dashboard')
+  this.props.history.push('/mainhub')
   }
 
   render() {
@@ -52,7 +52,7 @@ class Login extends React.Component {
                   onChange={this.handleChange}
                 />
             </div>
-            <button type="submit" className="ui basic green button" >Submit</button>
+            <button type="submit" className="ui basic gray button" >Submit</button>
           </form>
         </div>
       </div>
