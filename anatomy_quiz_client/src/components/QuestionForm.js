@@ -56,7 +56,7 @@ class QuestionsForm extends Component {
             <Form.Field>
               <label>Question</label>
                 <input
-                  type="text"
+                  type="file"
                   name = "text"
                   value = {this.state.text}
                   onChange = {this.handleOnChange} />
@@ -124,6 +124,16 @@ class QuestionsForm extends Component {
                 <Form.Field>
                   <Radio
                     label="3"
+                    name="correct_answer"
+                    value={this.state.third_answer}
+                    checked={this.state.correct_answer === this.state.third_answer}
+                    onChange={this.onRadioChange}
+                  />
+                </Form.Field>
+
+                <Form.Field>
+                  <Radio
+                    label="4"
                     name="correct_answer"
                     value={this.state.third_answer}
                     checked={this.state.correct_answer === this.state.third_answer}
