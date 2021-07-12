@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { addQuestion, loadUserQuestions } from '../actions/AllActions'
-import { Grid, Form, Button, Radio, Header, Message } from 'semantic-ui-react'
-import  Notification  from './NotificationBump'
+import { Grid, Form, Button, Radio, Header } from 'semantic-ui-react'
+import NotificationBump from './NotificationBump'
 
 const styles = {
   root: {
@@ -22,7 +22,7 @@ class QuestionsForm extends Component {
       third_answer: "",
       fourth_answer: "",
       correct_answer: "",
-      notification: ""
+      message: ""
     }
 
   }
@@ -31,7 +31,7 @@ class QuestionsForm extends Component {
     e.preventDefault();
     this.props.addQuestion(this.props.user, this.state);
     this.setState({
-      notification: "Question added!"
+      message: "Question added!"
     })
   }
 
@@ -51,7 +51,7 @@ class QuestionsForm extends Component {
       <Grid centered style={styles.root}>
         <Grid.Column width={10}>
           <Header as='h1'>Submit a Question!</Header>
-          {this.state.notification !== "" ? <Message notification={this.state.notification} /> : null }
+          {this.state.message !== "" ? <NotificationBump message={this.state.message} /> : null }
           <Form onSubmit={this.handleSubmit}>
             <Form.Field>
               <label>Question</label>

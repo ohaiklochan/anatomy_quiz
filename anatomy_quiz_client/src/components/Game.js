@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Notification from './NotificationBump'
+import NotificationBump from './NotificationBump'
 import { connect } from 'react-redux';
-import { Grid, Form, Button, Radio, Header, Transition, Message } from 'semantic-ui-react'
+import { Grid, Form, Button, Radio, Header, Transition } from 'semantic-ui-react'
 import { updateUserStreak, updateHighestStreak, updateUserQuestionId, resetUserStreak} from '../actions/AllActions'
 import api from '../adaptors/Api'
 
@@ -20,7 +20,7 @@ class Game extends Component {
       currentQuestion: this.props.questions[0],
       userAnswer: "",
       index: 0,
-      notification: ""
+      message: ""
     }
 
   }
@@ -46,13 +46,13 @@ class Game extends Component {
           currentQuestion: this.props.questions[updatedIndex],
           userAnswer: "",
           index: updatedIndex,
-          notification: "Correct!"
+          message: "Correct!"
         })
       }
 
     else {
-      if(this.state.notification !== "Correct!" || this.state.notification !== "") {
-          this.setState({notification: `Incorrect! Correct answer was ${this.state.currentQuestion.correct_answer}.`})
+      if(this.state.message !== "Correct!" || this.state.message !== "") {
+          this.setState({message: `Incorrect! Correct answer was ${this.state.currentQuestion.correct_answer}.`})
         }
       this.props.resetUserStreak();
       api.user.updateUser(this.props.user)
@@ -66,7 +66,7 @@ class Game extends Component {
       currentQuestion: this.props.questions[updatedIndex],
       userAnswer: "",
       index: updatedIndex,
-      notification: ""
+      message: ""
     })
   }
 
@@ -77,7 +77,7 @@ class Game extends Component {
           <Grid centered style={styles.root}>
             <Grid.Column width={10}>
               <Header as='h1'>Anatomy Quiz!</Header>
-                {this.state.notification !== "" ? (<Message notification={this.state.notification}/>) : (null)}
+                {this.state.message !== "" ? (<NotificationBump message={this.state.message}/>) : (null)}
                 <div className="question">
                     <br></br>
                     <Form.Field>
@@ -131,7 +131,7 @@ class Game extends Component {
                         onChange={this.onRadioChange}
                       />
                     </Form.Field>
-                {this.state.notification !== "" && this.state.notification !== "Correct!"  ?
+                {this.state.message !== "" && this.state.message !== "Correct!"  ?
                   (<Button onClick={this.handleNewGameClick}>Click to Restart!</Button>) :
                   (<Button onClick={this.handleSubmitClick}>Submit</Button>)}
               </div>
