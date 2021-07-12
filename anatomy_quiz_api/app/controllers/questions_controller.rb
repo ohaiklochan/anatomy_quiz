@@ -3,45 +3,51 @@ class QuestionsController < ApplicationController
 
   # GET /questions
   def index
-    @questions = Question.all
+    @questions = Question.all.sort_by{|q| q.id}
 
     render json: @questions
   end
 
   # GET /questions/1
   def show
+    @question = Question.find(params[:id])
     render json: @question
   end
 
   # POST /questions
   def create
-    @question = Question.new(question_params)
+    @question = @user.questions.build(question_params)
 
-    if @question.save
-      render json: @question, status: :created, location: @question
+    if @question.valid?
+      @question.save
+      render json: @question
     else
-      render json: @question.errors, status: :unprocessable_entity
+      render json: {errors:"I cannot create that question"}
     end
   end
 
   # PATCH/PUT /questions/1
   def update
-    if @question.update(question_params)
+    @question = Question.find(params[:id])
+    @question.update(question_params)
+    if (@question.valid?)
+        @question.save
       render json: @question
     else
-      render json: @question.errors, status: :unprocessable_entity
+      render json: {errors:"I cannot update that question"}
     end
   end
 
   # DELETE /questions/1
   def destroy
+    @question = Question.find(params[:id])
     @question.destroy
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_question
-      @question = Question.find(params[:id])
+    
+    def set_user
+      @user = User.find_by(id: params[:user_id])
     end
 
     # Only allow a list of trusted parameters through.
