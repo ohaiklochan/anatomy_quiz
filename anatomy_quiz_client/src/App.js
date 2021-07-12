@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import Login from './Login'
-import Dashboard from './containers/Dashboard'
-import Navbar from './Navbar'
-import PlayGame from './components/PlayGame'
-import QuestionsContainer from './containers/QuestionsContainer'
-import About from './components/About'
+import Login from './components/Login'
+import MainHub from './containers/MainHub'
+import Navbar from './components/Navbar'
+import Game from './components/Game'
+import Questions from './containers/Questions'
+import Info from './components/Info'
 import SignUp from './components/SignUp'
 import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import { connect } from 'react-redux'
-import { logout, loadQuestions, rankedUsers, login } from './actions/index'
-import api from './adaptors/api'
+import { logout, loadQuestions, rankedUsers, login } from './actions/AllActions'
+import api from './adaptors/Api'
 
 class App extends Component {
 
@@ -43,7 +43,7 @@ class App extends Component {
             <Route path="/login" component={Login}/>
             <Route path="/signup" component={SignUp}/>
             <Route path="/game" component={Game}/>
-            <Route path="/questions" component={QuestionsContainer}/>
+            <Route path="/questions" component={Questions}/>
             <Route path="/logout"/>
           </Switch>
         </div>
