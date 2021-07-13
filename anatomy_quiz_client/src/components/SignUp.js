@@ -1,7 +1,7 @@
 import React from 'react'
 import { addUser } from '../actions/AllActions'
 import { connect } from 'react-redux'
-import { Grid, Form, Button } from 'semantic-ui-css'
+import { Grid, Form, Button } from 'semantic-ui-react'
 
 class SignUp extends React.Component {
 

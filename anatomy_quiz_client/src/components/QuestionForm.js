@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addQuestion, loadUserQuestions } from '../actions/AllActions'
-import { Grid, Form, Button, Radio, Header } from 'semantic-ui-css'
+import { Grid, Form, Button, Radio, Header } from 'semantic-ui-react'
 import NotificationBump from './NotificationBump'
 
 const styles = {
