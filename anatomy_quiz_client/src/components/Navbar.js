@@ -11,7 +11,7 @@ class Navbar extends React.Component {
     return (
     <nav>
     <Menu>
-      <Menu.Item header name="Main Page" as = {Link} to = "/mainhub" />
+      <Menu.Item header name="Current Rankings" as = {Link} to = "/mainhub" />
       <Menu.Item name= "Info" as = {Link} to = "/" />
       <Menu.Item name= "Play Game" onClick={() => this.props.loadGameQuestions()} as = {Link} to = "/game"/>
       <Menu.Item name= "Submit a Question" onClick={() => this.props.loadUserQuestions()} as = {Link} to = "/questions"/>

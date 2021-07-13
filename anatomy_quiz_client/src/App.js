@@ -13,7 +13,7 @@ import api from './adaptors/Api'
 
 class App extends Component {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.loadQuestions();
     this.props.rankedUsers();
   }
