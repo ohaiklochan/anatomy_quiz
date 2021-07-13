@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Rankings from '../components/Rankings'
-import { Grid, Header } from 'semantic-ui-css'
+import { Grid, Header } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 
