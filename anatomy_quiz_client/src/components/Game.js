@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NotificationBump from './NotificationBump'
 import { connect } from 'react-redux';
-import { Grid, Form, Button, Radio, Header, Transition } from 'semantic-ui-react'
+import { Grid, Form, Button, Radio, Header } from 'semantic-ui-react'
 import { updateUserStreak, updateHighestStreak, updateUserQuestionId, resetUserStreak} from '../actions/AllActions'
 import api from '../adaptors/Api'
 
@@ -85,7 +85,7 @@ class Game extends Component {
                       <p>by {this.state.currentQuestion.user.username}</p>
                       <br></br>
 
-                      <label style={{'color' : 'green'}}>Current Streak: {this.props.user.streak}</label>
+                      <label style={{'color' : 'red'}}>Current Streak: {this.props.user.streak}</label>
                     </Form.Field>
                     <br></br>
 
