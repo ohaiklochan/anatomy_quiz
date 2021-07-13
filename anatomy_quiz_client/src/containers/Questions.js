@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import QuestionInfo from '../components/QuestionInfo'
+import QuestionForm from '../components/QuestionForm'
 import Question from '../components/Question'
 import { connect } from 'react-redux'
 
@@ -8,7 +8,7 @@ class Questions extends Component {
   render() {
     return (
       <div>
-        <QuestionInfo />
+        <QuestionForm />
         <Question questions={this.props.questions} />
       </div>
     );

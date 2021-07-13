@@ -56,7 +56,7 @@ class QuestionsForm extends Component {
             <Form.Field>
               <label>Question</label>
                 <input
-                  type="file"
+                  type="text"
                   name = "text"
                   value = {this.state.text}
                   onChange = {this.handleOnChange} />

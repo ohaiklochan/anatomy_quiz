@@ -13,9 +13,9 @@ import api from './adaptors/Api'
 
 class App extends Component {
 
-  UNSAFE_componentWillMount() {
-    this.props.loadQuestions();
-    this.props.rankedUsers();
+  state = {
+    questions: this.props.loadQuestions(),
+    currentRankedUsers: this.props.rankedUsers()
   }
 
   componentDidMount () {
