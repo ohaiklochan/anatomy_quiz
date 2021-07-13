@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addQuestion, loadUserQuestions } from '../actions/AllActions'
-import { Grid, Form, Button, Radio, Header } from 'semantic-ui-react'
+import { Grid, Form, Button, Radio, Header } from 'semantic-ui-css'
 import NotificationBump from './NotificationBump'
 
 const styles = {
@@ -55,90 +55,46 @@ class QuestionsForm extends Component {
           <Form onSubmit={this.handleSubmit}>
             <Form.Field>
               <label>Question</label>
-                <input
-                  type="text"
-                  name = "text"
-                  value = {this.state.text}
-                  onChange = {this.handleOnChange} />
+                <input type="text" name = "text" value = {this.state.text} onChange = {this.handleOnChange} />
             </Form.Field>
 
             <Form.Field>
               <label>First Answer:</label>
-                <input
-                  type="text"
-                  name = "first_answer"
-                  value = {this.state.first_answer}
-                  onChange = {this.handleOnChange} />
+                <input type="text" name = "first_answer" value = {this.state.first_answer} onChange = {this.handleOnChange} />
             </Form.Field>
 
             <Form.Field>
               <label>Second Answer:</label>
-                <input
-                  type="text"
-                  name = "second_answer"
-                  value = {this.state.second_answer}
-                  onChange = {this.handleOnChange} />
+                <input type="text" name = "second_answer" value = {this.state.second_answer} onChange = {this.handleOnChange} />
             </Form.Field>
 
             <Form.Field>
               <label>Third Answer:</label>
-                <input
-                  type="text"
-                  name = "third_answer"
-                  value = {this.state.third_answer}
-                  onChange = {this.handleOnChange} />
+                <input type="text" name = "third_answer" value = {this.state.third_answer} onChange = {this.handleOnChange} />
             </Form.Field>
 
             <Form.Field>
               <label>Fourth Answer:</label>
-                <input
-                  type="text"
-                  name = "fourth_answer"
-                  value = {this.state.fourth_answer}
-                  onChange = {this.handleOnChange} />
+                <input type="text" name = "fourth_answer" value = {this.state.fourth_answer} onChange = {this.handleOnChange} />
             </Form.Field>
 
 
                 <Form.Field>
                   <label> Set Answer: </label>
-                  <Radio
-                    label="1"
-                    name="correct_answer"
-                    value={this.state.first_answer}
-                    checked={this.state.correct_answer === this.state.first_answer }
-                    onChange={this.onRadioChange}
-                  />
+                  <Radio label="1" name="correct_answer" value={this.state.first_answer} checked={this.state.correct_answer === this.state.first_answer } onChange={this.onRadioChange} />
                 </Form.Field>
 
 
                 <Form.Field>
-                  <Radio
-                    label="2"
-                    name="correct_answer"
-                    value={this.state.second_answer}
-                    checked={this.state.correct_answer === this.state.second_answer}
-                    onChange={this.onRadioChange}
-                  />
+                  <Radio label="2" name="correct_answer" value={this.state.second_answer} checked={this.state.correct_answer === this.state.second_answer} onChange={this.onRadioChange} />
                 </Form.Field>
 
                 <Form.Field>
-                  <Radio
-                    label="3"
-                    name="correct_answer"
-                    value={this.state.third_answer}
-                    checked={this.state.correct_answer === this.state.third_answer}
-                    onChange={this.onRadioChange}
-                  />
+                  <Radio label="3" name="correct_answer" value={this.state.third_answer} checked={this.state.correct_answer === this.state.third_answer} onChange={this.onRadioChange} />
                 </Form.Field>
 
                 <Form.Field>
-                  <Radio
-                    label="4"
-                    name="correct_answer"
-                    value={this.state.third_answer}
-                    checked={this.state.correct_answer === this.state.third_answer}
-                    onChange={this.onRadioChange}
-                  />
+                  <Radio label="4" name="correct_answer" value={this.state.third_answer} checked={this.state.correct_answer === this.state.third_answer} onChange={this.onRadioChange} />
                 </Form.Field>
 
             <Button type="submit">Submit</Button>

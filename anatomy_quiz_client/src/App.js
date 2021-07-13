@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout, loadQuestions, rankedUsers, login } from './actions/AllActions'
 import api from './adaptors/Api'
+import './App.css'
 
 class App extends Component {
 

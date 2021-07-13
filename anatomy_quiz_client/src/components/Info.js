@@ -8,8 +8,10 @@ const Info = () => {
         <br></br>
         <br></br>
         <div>
-            <b>Welcome to The Anatomy Quiz!</b>
+            <h1>Welcome to The Anatomy Quiz!</h1>
             <br></br>
+            <img src="https://medlineplus.gov/images/Anatomy.jpg" />
+                <br></br>
             <h3>Brought to you by: The Human Body</h3>
             <br></br>
             <br></br>

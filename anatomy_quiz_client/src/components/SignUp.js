@@ -1,7 +1,7 @@
 import React from 'react'
 import { addUser } from '../actions/AllActions'
 import { connect } from 'react-redux'
-import { Grid, Form, Button } from 'semantic-ui-react'
+import { Grid, Form, Button } from 'semantic-ui-css'
 
 class SignUp extends React.Component {
 
@@ -40,41 +40,19 @@ class SignUp extends React.Component {
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
             <label>Username</label>
-            <input
-              name="username"
-              type="text"
-              placeholder="Username"
-              value={fields.username}
-              onChange={this.handleChange}
-              />
+            <input name="username" type="text" placeholder="Username" value={fields.username} onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>First Name</label>
-            <input
-              name="first_name"
-              type="text"
-              placeholder="First"
-              value={fields.first_name}
-              onChange={this.handleChange}/>
+            <input name="first_name" type="text" placeholder="First Name" value={fields.first_name} onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>Email</label>
-            <input
-              name="email"
-              type="email"
-              placeholder="Email"
-              value={fields.email}
-              onChange={this.handleChange}/>
+            <input name="email" type="email" placeholder="Email" value={fields.email} onChange={this.handleChange} />
           </Form.Field>
           <Form.Field>
             <label>Password</label>
-            <input
-              name="password"
-              type="password"
-              placeholder="Password"
-              value={fields.password}
-              onChange={this.handleChange}
-              />
+            <input name="password" type="password" placeholder="Password" value={fields.password} onChange={this.handleChange} />
           </Form.Field>
           <Button type="submit">Sign Up!</Button>
         </Form>

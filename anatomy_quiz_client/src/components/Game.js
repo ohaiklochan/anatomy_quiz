@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NotificationBump from './NotificationBump'
 import { connect } from 'react-redux';
-import { Grid, Form, Button, Radio, Header } from 'semantic-ui-react'
+import { Grid, Form, Button, Radio, Header } from 'semantic-ui-css'
 import { updateUserStreak, updateHighestStreak, updateUserQuestionId, resetUserStreak} from '../actions/AllActions'
 import api from '../adaptors/Api'
 
