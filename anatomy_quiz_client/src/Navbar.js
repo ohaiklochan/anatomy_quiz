@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Menu } from 'semantic-ui-react'
-import { logout, loadGameQuestions, loadUserQuestions, login } from '../actions/AllActions'
+import { logout, loadGameQuestions, loadUserQuestions, login } from './actions/AllActions'
 import { connect } from 'react-redux'
 
 class Navbar extends React.Component {

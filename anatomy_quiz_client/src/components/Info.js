@@ -10,7 +10,7 @@ const Info = () => {
         <div>
             <h1>Welcome to The Anatomy Quiz!</h1>
             <br></br>
-            <img src="https://medlineplus.gov/images/Anatomy.jpg" />
+            <img src="https://medlineplus.gov/images/Anatomy.jpg" alt="anatomy" />
                 <br></br>
             <h3>Brought to you by: The Human Body</h3>
             <br></br>

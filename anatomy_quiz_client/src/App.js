@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Login from './components/Login'
+import Login from './Login'
 import MainHub from './containers/MainHub'
-import Navbar from './components/Navbar'
+import Navbar from './Navbar'
 import Game from './components/Game'
 import Questions from './containers/Questions'
 import Info from './components/Info'
@@ -14,9 +14,9 @@ import './App.css'
 
 class App extends Component {
 
-  state = {
-    questions: this.props.loadQuestions(),
-    currentRankedUsers: this.props.rankedUsers()
+  componentWillMount() {
+    this.props.loadQuestions();
+    this.props.rankedUsers();
   }
 
   componentDidMount () {
