@@ -5,7 +5,7 @@ import { rankedUsers } from '../actions/AllActions'
 
 class MainHub extends Component {
 
-    componentWillUpdate() {
+    UNSAFE_componentWillUpdate() {
         this.props.rankedUsers()
     }
 

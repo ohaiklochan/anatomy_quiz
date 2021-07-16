@@ -4,9 +4,9 @@ import usersReducer from './usersReducer';
 
 
 
-const rootReducer = combineReducers({
+const allReducers = combineReducers({
   questions: questionsReducer,
   stats: usersReducer
 });
 
-export default rootReducer;
+export default allReducers;

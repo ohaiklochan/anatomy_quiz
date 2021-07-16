@@ -1,4 +1,5 @@
-export default function questionsReducer ( state = {
+export default function questionsReducer ( 
+  state = {
     user:{},
     questions: [],
     selectedQuestions: []

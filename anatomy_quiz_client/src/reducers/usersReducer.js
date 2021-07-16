@@ -1,4 +1,5 @@
-export default function usersReducer ( state = {
+export default function usersReducer ( 
+  state = {
     users: []
   }, action) {
     console.log(action)

@@ -4,11 +4,11 @@ import './index.css'
 import App from './App'
 import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
-import rootReducer from './reducers/allReducers'
+import allReducers from './reducers/allReducers'
 import thunk from 'redux-thunk'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(rootReducer, composeEnhancers(
+const store = createStore(allReducers, composeEnhancers(
   applyMiddleware(thunk)
 ))
 

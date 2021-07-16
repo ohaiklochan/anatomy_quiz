@@ -14,7 +14,7 @@ import './App.css'
 
 class App extends Component {
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.props.loadQuestions();
     this.props.rankedUsers();
   }
@@ -28,7 +28,7 @@ class App extends Component {
     }
   }
 
-  componentWillUpdate() {
+  UNSAFE_componentWillUpdate() {
     this.props.rankedUsers();
   }
 
