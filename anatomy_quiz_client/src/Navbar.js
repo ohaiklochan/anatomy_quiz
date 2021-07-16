@@ -11,10 +11,10 @@ class Navbar extends React.Component {
     return (
     <nav>
     <Menu>
-      <Menu.Item header name="Current Rankings" as = {Link} to = "/mainhub" />
-      <Menu.Item name= "Info" as = {Link} to = "/" />
-      <Menu.Item name= "Play Game" onClick={() => this.props.loadGameQuestions()} as = {Link} to = "/game"/>
-      <Menu.Item name= "Submit a Question" onClick={() => this.props.loadUserQuestions()} as = {Link} to = "/questions"/>
+      <Menu.Item header name="Current Rankings ||" as = {Link} to = "/mainhub" />
+      <Menu.Item name= "Info ||" as = {Link} to = "/" />
+      <Menu.Item name= "Play Game ||" onClick={() => this.props.loadGameQuestions()} as = {Link} to = "/game"/>
+      <Menu.Item name= "Submit a Question ||" onClick={() => this.props.loadUserQuestions()} as = {Link} to = "/questions"/>
     {loggedIn ? (
         <Menu.Menu position="right">
           <Menu.Item>
@@ -24,7 +24,7 @@ class Navbar extends React.Component {
         </Menu.Menu>
       ) : (
       <Menu.Menu position='right'>
-        <Menu.Item name= "Sign Up" onClick={() => this.props.history.push('/signup')} as = {Link} to = "/signup"/>
+        <Menu.Item name= "Sign Up ||" onClick={() => this.props.history.push('/signup')} as = {Link} to = "/signup"/>
         <Menu.Item name = "Login" onClick={() => this.props.history.push('/login')} as = {Link} to = "/login" />
       </Menu.Menu>
     )}
